@@ -1,0 +1,110 @@
+{% extends 'shop/index.html' %} {% load static %} {% block content %}
+<div class="row mt-4">
+  <div class="col-12">
+    <div class="shadow p-2 mb-4">
+      <div class="d-flex justify-content-end">
+        <p class="fw-bold p-2">
+          {% if artikels %} Gesamtpreis:
+          {{bestellung.get_gesamtpreis|floatformat:2}} € {% else %} Dein
+          Warenkorb ist leer. {% endif %}
+        </p>
+        <p>
+          {% if artikels %}
+          <a class="btn btn-danger" href="{% url 'kasse' %}">Kasse</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% if artikels %}
+  <div class="col-12">
+    <div class="shadow p-2 mb-4">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Bild</th>
+            <th scope="col">Artikel</th>
+            <th scope="col">Menge</th>
+            <th scope="col">Preis</th>
+            <th scope="col">Summe</th>
+            <th scope="col">Löschen</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          {% for artikel in artikels %}
+          <tr>
+            <!-- <th scope="row">{{artikel.id}}</th> -->
+            <th scope="row">{{forloop.counter}}</th>
+            <td>
+              {% if artikel.artikel.bild %}
+              <img
+                src="{{ artikel.artikel.bild.url }}"
+                width="50"
+                height="50"
+                alt="{{ artikel.artikel.beschreibung.url }}"
+              />
+              {% else %}
+              <img
+                src="{% static 'bilder/dummy.jpg' %}"
+                width="50"
+                height="50"
+                alt=""
+              />
+              {% endif %}
+            </td>
+            <td>{{artikel.artikel.name}}</td>
+            <td>{{artikel.menge}}</td>
+            <td>{{artikel.artikel.preis|floatformat:2}} €</td>
+            <td>{{artikel.get_summe|floatformat:2}} €</td>
+            <td>
+              <button
+                class="btn btn-outline-danger warenkorb-bestellen"
+                data-artikel="{{artikel.artikel.id}}"
+                data-action="entfernen"
+              >
+                - 1
+              </button>
+            </td>
+          </tr>
+          {% endfor %}
+
+          <!--           <tr>
+            <th scope="row">1</th>
+            <td>
+              <img
+                src="{% static 'bilder/kopfhoerer.jpg' %}"
+                width="50"
+                height="50"
+                alt=""
+              />
+            </td>
+            <td>Kopfhörer</td>
+            <td>1</td>
+            <td>99,00 €</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <img
+                src="{% static 'bilder/kopfhoerer.jpg' %}"
+                width="50"
+                height="50"
+                alt=""
+              />
+            </td>
+            <td>Kopfhörer</td>
+            <td>1</td>
+            <td>99,00 €</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <!-- </div>
+  <h2>Dein Warenkorb ist leer!</h2> -->
+    {% endif %}
+  </div>
+
+  {% endblock content %}
+</div>

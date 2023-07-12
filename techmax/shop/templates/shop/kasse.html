@@ -1,0 +1,95 @@
+{% extends 'shop/index.html' %} {% block content %}
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="shadow p-4">
+      <h3>Bestellübersicht</h3>
+      <hr />
+      {% for artikel in artikels %}
+      <div class="d-flex">
+        <p class="p-2">{{ artikel.artikel }}:</p>
+        <p class="me-auto p-2">{{ artikel.menge }} x</p>
+        <p class="p-2">{{ artikel.get_summe|floatformat:2 }} €</p>
+      </div>
+      {% endfor %}
+      <hr />
+      <div class="d-flex">
+        <p class="me-auto fw-bold p-2">
+          Gesamtanzahl: {{ bestellung.get_gesamtmenge|floatformat:0 }}
+        </p>
+        <p class="fw-bold p-2">
+          Gesamtpreis: {{ bestellung.get_gesamtpreis|floatformat:2 }}
+        </p>
+        <!-- hidden Input-Feld für die "Ansprache" GetElementByID durch die Warenkorb.js -->
+        <input
+          type="number"
+          class="d-none"
+          id="gesamtpreis"
+          value="{{bestellung.get_gesamtpreis|floatformat:2}}"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <!-- Pflichtfelder: required -->
+    <div class="shadow p-4">
+      <form id="formular" class="row g-3">
+        <div class="col-md-6">
+          <label for="inputName" class="form-label">Name</label>
+          {% if request.user.is_authenticated %}
+          <input
+            type="text"
+            class="form-control"
+            id="inputName"
+            value="{{request.user|title}}"
+            required
+          />
+          {% else %}
+          <input type="text" class="form-control" id="inputName" required />
+          {% endif %}
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          {% if request.user.is_authenticated %}
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            value="{{request.user.email}}"
+            required
+          />
+          {% else %}
+          <input type="email" class="form-control" id="inputEmail" required />
+          {% endif %}
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Addresse</label>
+          <input type="text" class="form-control" id="inputAdresse" required />
+        </div>
+        <div class="col-md-2">
+          <label for="inputPlz" class="form-label">PLZ</label>
+          <input type="text" class="form-control" id="inputPlz" required />
+        </div>
+        <div class="col-md-5">
+          <label for="inputStadt" class="form-label">Stadt</label>
+          <input type="text" class="form-control" id="inputStadt" required />
+        </div>
+        <div class="col-md-5">
+          <label for="inputLand" class="form-label">Land</label>
+          <input type="text" class="form-control" id="inputLand" required />
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button type="submit" id="formular-button" class="btn btn-secondary">
+            weiter
+          </button>
+        </div>
+      </form>
+      <!-- ausgebl3endeter Bezahlen-Button mit class = d-none (display none) -->
+      <div class="d-flex d-none" id="bezahlen-info">
+        <p class="me-auto fw-bold">Zahlung: Paypal</p>
+        <!-- btn-danger = roter Button -->
+        <button class="btn btn-danger" id="bezahlen-button">Bezahlen</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

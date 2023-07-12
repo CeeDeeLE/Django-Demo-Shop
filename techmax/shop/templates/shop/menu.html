@@ -1,0 +1,62 @@
+{% load static %}
+<nav
+  class="navbar d-flex shadow sticky-top p-3 mb-4 navbar-expand-sm"
+  style="background-color: #588157"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand link-light" href="{% url 'shop' %}"
+      ><img
+        src="{% static 'bilder/techshop_kids.png' %}"
+        width="90"
+        alt="Logo Connis TechShop"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {% if artikels %}
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav">
+        <div class="d-flex align-items-center">
+          {% if request.user.is_authenticated %}
+          <!-- Benutzer wird angezeigt, title sorgt für einen Großbuchstaben an 1. Stelle des Namens -->
+          <h5 class="text-light m-2">
+            Du bist angemeldet als: {{request.user|title}}
+          </h5>
+          <a class="nav-link btn btn-light p-2" href="{% url 'logout' %}"
+            >Logout</a
+          >
+          {% else %}
+          <a class="nav-link btn btn-light p-2" href="{% url 'login' %}"
+            >Login</a
+          >
+          {% endif %}
+
+          <a class="nav-link link-light p-2" href="{% url 'warenkorb' %}"
+            ><img
+              src="{% static 'bilder/warenkorb.png' %}"
+              width="30"
+              alt="Warenkorb"
+            />
+            <!-- die Anzahl von Waren im Korb wird in der context_processor.py für alle Seiten gezaehlt -->
+            {% if menge >= 1 %}
+            <span
+              class="badge rounded-pill bg-danger position-absolute top-25 start-25 translate-middle"
+              >{{menge}}</span
+            >
+            {% endif %}
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</nav>

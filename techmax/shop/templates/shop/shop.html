@@ -1,0 +1,40 @@
+{% extends 'shop/index.html' %} {% load static %} {% block content %}
+<div class="row row-cols-4">
+  {% for artikel in artikels %}
+  <div class="col mb-3">
+    <div class="card" style="max-width: 25rem; min-height: 24rem">
+      <!-- geschweifte Klammer% if '../../../static/bilder/2x geschweifte Klammerartikel.bild2x geschweifte Klammer' != empty %geschweifte Klammer -->
+      {% if artikel.bild %}
+      <img
+        src="{{artikel.bild.url}}"
+        max-width="50"
+        class="card-img-top"
+        alt="{{artikel.beschreibung.url}}"
+      />
+      {% else %}
+      <img
+        src="{% static 'bilder/dummy.jpg' %}"
+        class="card-img-top"
+        alt="{{artikel.beschreibung.url}}"
+      />
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{artikel.name}}</h5>
+        <p class="card-text">{{artikel.beschreibung}}</p>
+        <div class="d-flex justify-content-between">
+          <h5 class="text-secondary">{{artikel.preis|floatformat:2}} €</h5>
+          <!-- warenkorb-bestellen ist Klassenname für JS-Datei -> getElementByCXlassname -->
+          <button
+            class="btn btn-outline-danger warenkorb-bestellen"
+            data-artikel="{{artikel.id}}"
+            data-action="bestellen"
+          >
+            Bestellen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
