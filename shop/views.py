@@ -184,20 +184,35 @@ def bestellen(request):
 
     return response
 
-# Bestellung -> bestellung.html -> id liefert die url
-# -> aus der DB wirdf genau ein Datensatz geladen
-# -> mit get wird genau ein Datensatz der uuid geladen
-def bestellung(request,id):
-    bestellung = Bestellung.objects.get(auftrags_id=id)
 
-    if bestellung and str(request.user) == str(bestellung.kunde):
+# Bestellung -> bestellung.html
+# @login_required(login_url='login')
+def bestellung(request,id):
+    
+    # Kapitel 46
+    # id muss exact der id aus der urls.py entsprechen
+    # -> aus der DB wird genau ein Datensatz geladen
+    # -> mit get wird genau ein Datensatz der uuid geladen
+    bestellung = Bestellung.objects.filter(auftrags_id=id)
+
+    if bestellung:
         bestellung = Bestellung.objects.get(auftrags_id=id)
         artikels = bestellung.bestellteartikel_set.all()
         ctx = {'artikels':artikels,'bestellung':bestellung}
         return render(request, 'shop/bestellung.html',ctx)
-    # wenn die Bestellung nicht existiert, zurück zur Shop-Seite
     else:
         return redirect('shop')
+    
+    # bestellung = Bestellung.objects.get(auftrags_id=id)
+
+    # if bestellung and str(request.user) == str(bestellung.kunde):
+    #     bestellung = Bestellung.objects.get(auftrags_id=id)
+    #     artikels = bestellung.bestellteartikel_set.all()
+    #     ctx = {'artikels':artikels,'bestellung':bestellung}
+    #     return render(request, 'shop/bestellung.html',ctx)
+    # # wenn die Bestellung nicht existiert, zurück zur Shop-Seite
+    # else:
+    #     return redirect('shop')
 
 # Fehlerbehandkung, wenn Seite nicht existiert
 def fehler404(request, exception):
