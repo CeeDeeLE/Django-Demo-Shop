@@ -7,6 +7,7 @@ import debug_toolbar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls')),
+    # Debug-Toolbar erscheint am lin ken Bildschirmrand
     path('__debug_toolbar__', include('debug_toolbar.urls')),
 ]
 
