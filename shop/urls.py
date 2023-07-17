@@ -19,6 +19,6 @@ urlpatterns = [
 
     # Beisile für eine dynamische url 
     # -> <uuid:id> ist nicht statisch (mit Zahlen, Kleinbuchstaben und Bindestrichen)
-    # -> andere Möglichkeiten: <int:id>, <slug:id>
+    # -> andere Möglichkeiten: <str:id>, <int:id>, <slug:id>
     path('bestellung/<uuid:id>', views.bestellung, name ="bestellung"),
 ]
