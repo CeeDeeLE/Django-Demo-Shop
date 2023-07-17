@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from . forms import EigenesUserCreationForm
 # für Bezahlvorgang -> Erstellung eindeutiger Auftrags-IDs
 import uuid
+# für Bestellübersichtsausgabe aus Warenkorb
 from django.utils.safestring import mark_safe
 from . viewtools import gastCookie, gastBestellung
 
@@ -176,9 +177,14 @@ def bestellen(request):
     else:
         print("nicht eingeloggt")        
 
+    # uuid wird in einen String umgewandelt für die Ausgabe in der URL der Bestellung/ Bestellübersicht
     auftragsUrl = str(auftrags_id)
-    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung mit ID: "+auftragsUrl+"</a>"))
+    # mit importiertem mark_safe wird die uuid als sicher markiert
+    # 
+    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung</a>"))
+    
     # return JsonResponse('Bestellung erfolgreich', safe=False)
+    
     response = HttpResponse('Bestellung erfolgreich')
     response.delete_cookie('warenkorb')
 
