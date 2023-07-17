@@ -1,6 +1,10 @@
 <!-- http://127.0.0.1:8000/bestellung -> Fehlerseite mit 'Page not found' -->
 <!-- mit Bestell-uuid: http://127.0.0.1:8000/bestellung/83a5ca9b-39f4-488a-964f-ddf32c4537a2 -->
 <!-- -> Startseite, da erledigt auf TRUE -->
+
+<!-- damit bei falscher Bestell-Übersichtsseitenadresse Fehler 404 angezeigt wird:
+python manage.py runserver --insecure 
++ in settings.py debug = FALSE & ALLOWED_HOSTS = ["localhost", "127.0.0.1"] -->
 {% extends 'shop/index.html' %} {% load static %} {% block content %}
 <div class="row mt-4">
   <div class="col-12">

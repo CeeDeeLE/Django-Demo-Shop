@@ -190,7 +190,7 @@ def bestellen(request):
 def bestellung(request,id):
     
     # Kapitel 46
-    # id muss exact der id aus der urls.py entsprechen
+    # id muss exakt der id aus der urls.py entsprechen
     # -> aus der DB wird genau ein Datensatz geladen
     # -> mit get wird genau ein Datensatz der uuid geladen
     bestellung = Bestellung.objects.filter(auftrags_id=id)
@@ -214,6 +214,6 @@ def bestellung(request,id):
     # else:
     #     return redirect('shop')
 
-# Fehlerbehandkung, wenn Seite nicht existiert
+# Fehlerbehandlung, wenn Seite nicht existiert
 def fehler404(request, exception):
     return render(request, 'shop/404.html')
