@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # ab hier Ergänzungen eingefügt
     'shop.apps.ShopConfig',
     'debug_toolbar',
     'paypal.standard.ipn',
@@ -47,13 +48,18 @@ PAYPAL_TEST = True
 
 
 MIDDLEWARE = [
+    # Debug-Toolbar-Ergänzung muss an erster Stelle erfolgen 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    # Ergänzung für CSRF-Token
     'django.middleware.csrf.CsrfViewMiddleware',
+    # Ergänzung für User-Authentication
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # Ergänzung für Popup-Messages
     'django.contrib.messages.middleware.MessageMiddleware',
+    # Ergänzung für Click-Verfolgung
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
