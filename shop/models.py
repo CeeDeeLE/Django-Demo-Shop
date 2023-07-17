@@ -61,7 +61,7 @@ class BestellteArtikel(models.Model):
         summe = self.artikel.preis * self.menge
         return summe
 
-
+# Adresse kommt erst mit Kasse und Lieferung
 class Adresse(models.Model):
     kunde = models.ForeignKey(Kunde, on_delete=models.SET_NULL, null=True, blank=True)
     bestellung = models.ForeignKey(Bestellung, on_delete=models.SET_NULL, null=True, blank=True)
