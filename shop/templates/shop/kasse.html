@@ -6,7 +6,7 @@
       <hr />
       {% for artikel in artikels %}
       <div class="d-flex">
-        <p class="p-2">{{ artikel.artikel }}:</p>
+        <p class="p-2">{{ artikel.artikel.name }}:</p>
         <p class="me-auto p-2">{{ artikel.menge }} x</p>
         <p class="p-2">{{ artikel.get_summe|floatformat:2 }} €</p>
       </div>
@@ -43,6 +43,7 @@
             value="{{request.user|title}}"
             required
           />
+          <!-- Ausgabe eines leeren Inputfeldes Name & eMail für nicht eingeloggte User -->
           {% else %}
           <input type="text" class="form-control" id="inputName" required />
           {% endif %}

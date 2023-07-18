@@ -19,6 +19,7 @@ import uuid
 # mark_safe zur Deklarierung einer ID als sicher
 from django.utils.safestring import mark_safe
 
+# Bestellung von nicht eingeloggten Usern
 from . viewtools import gastCookie, gastBestellung
 
 # Create your views here.
@@ -29,30 +30,88 @@ def shop(request):
     ctx = {'artikels':artikels}
     return render(request, 'shop/shop.html', ctx)
 
+# Return-Wert Warenkorb für eingeloggte User aus der DB
+# Klassendefinitionen dazu in models.py
 def warenkorb(request):
     if request.user.is_authenticated:
         kunde = request.user.kunde
         bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
         artikels = bestellung.bestellteartikel_set.all()
+
+        # else betrifft die nicht eingeloggten User
+        # die Artikeldaten wie Name, Bild und Preis werden auch aus der DB geladen 
     else:
-        artikels = []
-        bestellung = []
+        # artikels = []
+        # bestellung = []
+
+        # Kapitel 52
+        # analoge Abfrage wird im Kassenblock benötigt
+        # Kapitel 53
+        # gesamter Block wird in viewtools.py ausgelagert, da er sich im artikelBackend wiederholt
+
+        # try:
+        #     warenkorb = json.loads(request.COOKIES['warenkorb'])
+        # except:
+        #     warenkorb = {}
+
+        # artikels = []
+        # bestellung = {'get_gesamtpreis':0, 'get_gesamtmenge':0}
+        # # die Menge wird in einer eigenen Var abgespeichert
+        # menge = bestellung['get_gesamtmenge']
+        
+        # for i in warenkorb:
+        #     menge += warenkorb[i]["menge"]
+        #     # Objekt Artikel holt Werte aus der DB, s. models.py
+        #     artikel = Artikel.objects.get(id=i)
+        #     gesamtpreis = (artikel.preis * warenkorb[i]['menge'])
+        #     bestellung['get_gesamtpreis'] += gesamtpreis
+
+        #     # artikel enthält ein Objekt artikel, das den Namen, die Bild-Url und den Preis enthält
+        #     # menge und gesamtpreis kommen direkt aus artikel
+        #     artikel = {
+        #         'artikel':{
+        #             'id':artikel.id,
+        #             'name':artikel.name,
+        #             'preis':artikel.preis,
+        #             'bild':artikel.bild
+        #         },
+        #         'menge':warenkorb[i]['menge'],
+        #         'get_summe':gesamtpreis
+        #     }
+        #     artikels.append(artikel)
+
+        # nach Auslagerung des obigen Codes in die viewtools.py:
+        cookieDaten = gastCookie(request)
+        artikels = cookieDaten['artikels']
+        bestellung = cookieDaten['bestellung']
 
     ctx = {"artikels":artikels, "bestellung":bestellung}        
     return render(request, 'shop/warenkorb.html',ctx)
 
+
+# Return-Wert Kasse
 def kasse(request):
     if request.user.is_authenticated:
         kunde = request.user.kunde
         bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
         artikels = bestellung.bestellteartikel_set.all()
+        
+    # else gilt für nicht eingeloggte User
+    # Werte werden aus dem Cookie warenkorb geholt bzw. über die artikel_id aus der DB
     else:
-        artikels = []
-        bestellung = []
+        # artikels = []
+        # bestellung = []
+        
+        # Kapitel 53
+        # gesamter Block wird in viewtools.py ausgelagert, da er sich im artikelBackend wiederholt
+        cookieDaten = gastCookie(request)
+        artikels = cookieDaten['artikels']
+        bestellung = cookieDaten['bestellung']
 
     ctx = {"artikels":artikels, "bestellung":bestellung}      
     return render(request, 'shop/kasse.html', ctx)
 
+# im artikelBackend werden Daten in die DB geladen oder geholt
 def artikelBackend(request):
     daten = json.loads(request.body)
     artikelID = daten['artikelID']
