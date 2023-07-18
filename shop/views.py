@@ -1,15 +1,24 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+
+# login_required, um Seiten vor unberechtigtem Zugriff zu schützen
+# Decorator wird mit @ ausgegeben
+from django.contrib.auth.decorators import login_required
+
 from . models import *
 from django.http import JsonResponse, HttpResponse
 import json
 from django.contrib.auth import authenticate, login, logout
+
+# EigenesUserCreationForm basiert auf UserCreationForm von Django und ersetzt diese
 # from django.contrib.auth.forms import UserCreationForm
-# EigenesUserCreationForm basiert auf UserCreationForm von Django
 from . forms import EigenesUserCreationForm
+
 # für Bezahlvorgang -> Erstellung eindeutiger Auftrags-IDs
 import uuid
+# mark_safe zur Deklarierung einer ID als sicher
 from django.utils.safestring import mark_safe
+
 from . viewtools import gastCookie, gastBestellung
 
 # Create your views here.
@@ -186,33 +195,30 @@ def bestellen(request):
 
 
 # Bestellung -> bestellung.html
-# @login_required(login_url='login')
+# wenn ein nicht eingeloggter User auf eine Bestell-Übersichts-Adresse eines Dritten zugreifen möchte, 
+# -> soll er auf der Login-Seite landen
+@login_required(login_url='login')
 def bestellung(request,id):
     
     # Kapitel 46
     # id muss exakt der id aus der urls.py entsprechen
     # -> aus der DB wird genau ein Datensatz geladen
-    # -> mit get wird genau ein Datensatz der uuid geladen
-    bestellung = Bestellung.objects.filter(auftrags_id=id)
+    # -> mit .get wird genau ein Datensatz der uuid geladen (eine Bestellung eines Kunden)
+    # -> mit .filter wird ein Query-Set abgerufen
+    # bestellung = Bestellung.objects.filter(auftrags_id=id)
+    bestellung = Bestellung.objects.get(auftrags_id=id)
 
-    if bestellung:
+    # if-Abfrage soll die Bestellung aus dem Warenkorb UND den zugehörigen Kunden enthalten
+    # -> Aufruf der Bestell-Übersicht ist damit auf diesen Kunden beschränkt
+    if bestellung and str(request.user) == str(bestellung.kunde):
         bestellung = Bestellung.objects.get(auftrags_id=id)
         artikels = bestellung.bestellteartikel_set.all()
         ctx = {'artikels':artikels,'bestellung':bestellung}
         return render(request, 'shop/bestellung.html',ctx)
     else:
+        # wenn die Bestellung nicht existiert, zurück zur Shop-Seite
         return redirect('shop')
     
-    # bestellung = Bestellung.objects.get(auftrags_id=id)
-
-    # if bestellung and str(request.user) == str(bestellung.kunde):
-    #     bestellung = Bestellung.objects.get(auftrags_id=id)
-    #     artikels = bestellung.bestellteartikel_set.all()
-    #     ctx = {'artikels':artikels,'bestellung':bestellung}
-    #     return render(request, 'shop/bestellung.html',ctx)
-    # # wenn die Bestellung nicht existiert, zurück zur Shop-Seite
-    # else:
-    #     return redirect('shop')
 
 # Fehlerbehandlung, wenn Seite nicht existiert
 def fehler404(request, exception):
