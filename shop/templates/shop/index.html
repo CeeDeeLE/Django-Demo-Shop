@@ -28,6 +28,9 @@
       2) https://docs.djangoproject.com/en/4.2/howto/csrf/ 
       3) getCookie function nutzen und umschreiben
       */
+      /* Token steht durch Einbindung in die index.html in der gesamten App zur Verfügung
+      -> getCookie als Funktion sollte auch hier eingerichtet sein
+      */
       function getToken(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== "") {
@@ -46,6 +49,40 @@
         return cookieValue;
       }
       const csrftoken = getToken("csrftoken");
+
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+      /* Cookie soll in der Var Warenkorb gespeichert werden */
+      let warenkorb = JSON.parse(getCookie("warenkorb"));
+      if (warenkorb == undefined) {
+        warenkorb = {};
+        /* Speicherung als Wertepaar 
+        Cookie soll für die gesamte Site gültig bleiben: domain;path=/
+        Cookie soll von allen Seiten akzeptiert werden: SameSite=None; Secure
+         + ";domain;path=/; SameSite=None; Secure"
+        */
+        document.cookie =
+          "warenkorb=" +
+          JSON.stringify(warenkorb) +
+          ";domain;path=/; SameSite=None; Secure";
+      }
+      /* zum Testen Ausgabe in Konsole */
+      console.log("Warenkorb: ", warenkorb);
     </script>
   </head>
   <body>
