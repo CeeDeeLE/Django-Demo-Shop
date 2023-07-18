@@ -4,12 +4,17 @@
 // Warenkorb -> warenkorb.html
 let bestellenButtons = document.getElementsByClassName("warenkorb-bestellen");
 
+// alle Bestellen-Buttons werden in einer Schleife durchlaufen
 for (let i = 0; i < bestellenButtons.length; i++) {
   bestellenButtons[i].addEventListener("click", function () {
     let artikelID = this.dataset.artikel;
     let action = this.dataset.action;
+    // Testausgabe als Popup
     // alert("Aertikel-ID: " + artikelID + "  Action: " + action);
 
+    // Funktionen bei Bestellung als nicht eingeloggter und als eingeloggter User folgen unten
+    // benutzer-Variable wurde in der index.html als globale Variable angelegt
+    // -> kann jetzt für eingeloggte und nicht eingeloggte User genutzt werden
     if (benutzer == "AnonymousUser") {
       updateGastBestellung(artikelID, action);
     } else {
@@ -19,8 +24,16 @@ for (let i = 0; i < bestellenButtons.length; i++) {
 }
 
 // Bestellung von nicht registrierten Nutzern
+// Artikel-Nr. und Menge werden für den Gast statt in der DB im WK-Cookie gespeichert bzw. von dort gelöscht
 function updateGastBestellung(artikelID, action) {
-  //console.log("Gast " +artikelID+" "+action)
+  // zum Testen Ausgabe in Console
+  // console.log("Gast: Artikel-Nr.:" +artikelID+" Aktion: "+action)
+
+  // Bestellung von eingeloggten Kunden wird an das Backend gesendet
+  // -> s. views.py artikelBackend-View
+  // wenn-dann wird für die Speicherung im warenkorb-Cookie (angelegt in der index.html)
+  // -> für nicht eingeloggte User an dieser Stelle festgelegt, nicht in der views.py
+  // -> ist aber analog zu artikelBackend
   if (action == "bestellen") {
     if (warenkorb[artikelID] == undefined) {
       warenkorb[artikelID] = { menge: 1 };
@@ -31,19 +44,25 @@ function updateGastBestellung(artikelID, action) {
   if (action == "entfernen") {
     warenkorb[artikelID]["menge"] -= 1;
 
+    // Löschen des Artikels, wenn Menge gleich Null
     if (warenkorb[artikelID]["menge"] <= 0) {
       delete warenkorb[artikelID];
     }
   }
+  // Zeile aus index.html zum Anlegen des Cookies übernehmen
+  // -> Cookie überschreiben
   document.cookie =
     "warenkorb=" +
     JSON.stringify(warenkorb) +
     ";domain;path=/; SameSite=None; Secure";
+  // Test-Ausgabe in der Console
   console.log(warenkorb);
+  // Artikel und Menge müssen für nicht eingeloggte User noch der globalen context_processors.py bekannt gemacht werden
+  // mit jeder Bestellung wird die Seite neu geladen, damit Artikel und Menge hochgezählt werden
   location.reload();
 }
 
-// Bestellung von registrierten Nutzern / Kunden
+// Bestellung von registrierten Nutzern / Kunden -> Ansprache des Backends in views.py
 function updateKundenBestellung(artikelID, action) {
   let url = "/artikel_backend/";
 

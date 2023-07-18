@@ -60,6 +60,7 @@ def artikelBackend(request):
     # zum Testen
     # print('Artikel-ID: ', artikelID, ' Action: ', action)
 
+    # kunde = request.user.kunde setzt einen eingeloggten Kunden voraus
     kunde = request.user.kunde
     artikel = Artikel.objects.get(id=artikelID)
     # wenn schon eine Bestellung existiert, "get", sonst "create"

@@ -11,8 +11,10 @@ def warenkorb_anzahl(request):
             menge = bestellung.get_gesamtmenge
         else:
             menge = 0
-
+    # wenn User kein eingeloggter Kunde ist:
     else:
+    # -> Auslesen des warenkorb-Cookies 
+    # gibt es kein warenkorb-Cookie, dann soll ein leerer warenkorb erzeugt werden
         menge = 0
         try:
             warenkorb = json.loads(request.COOKIES['warenkorb'])
