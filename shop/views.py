@@ -227,26 +227,33 @@ def bestellen(request):
     if request.user.is_authenticated:
         kunde = request.user.kunde
         bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
-        # Floatpreis für 2 Nachkommastellen
-        gesamtpreis = float(daten['benutzerDaten']['gesamtpreis'])
-        bestellung.auftrags_id = auftrags_id
-        bestellung.erledigt = True
-        bestellung.save()
-
-        Adresse.objects.create(
-            kunde=kunde,
-            bestellung=bestellung,
-            adresse=daten['lieferadresse']['adresse'],
-            plz=daten['lieferadresse']['plz'],
-            stadt=daten['lieferadresse']['stadt'],
-            land=daten['lieferadresse']['land'],
-        )
     # für nicht registrierte Nutzer
     else:
-        print("nicht eingeloggt")        
+        # Test-Print -> abgelöst in Kapitel 54
+        # print("nicht eingeloggt")        
 
+        # Funktion ausgelagert in viewtools.py
+        # Kapitel 54
+        kunde, bestellung = gastBestellung(request, daten)       
+
+    # Floatpreis für 2 Nachkommastellen
+    gesamtpreis = float(daten['benutzerDaten']['gesamtpreis'])
+    bestellung.auftrags_id = auftrags_id
+    bestellung.erledigt = True
+    bestellung.save()
+
+    Adresse.objects.create(
+        kunde=kunde,
+        bestellung=bestellung,
+        adresse=daten['lieferadresse']['adresse'],
+        plz=daten['lieferadresse']['plz'],
+        stadt=daten['lieferadresse']['stadt'],
+        land=daten['lieferadresse']['land'],
+    )
+    
     auftragsUrl = str(auftrags_id)
-    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung mit ID: "+auftragsUrl+"</a>"))
+    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung</a>"))
+    # zum Löschen des Cookies response in HttpResponse ändern -> Kapitel 54
     # return JsonResponse('Bestellung erfolgreich', safe=False)
     response = HttpResponse('Bestellung erfolgreich')
     response.delete_cookie('warenkorb')

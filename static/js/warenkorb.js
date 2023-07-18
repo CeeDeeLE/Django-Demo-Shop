@@ -113,6 +113,8 @@ function submitFormular() {
   console.log(benutzerDaten, lieferadresse);
 
   // Datenverarbeitung nach Bezahlen
+  // Formulardaten werden an das Backend gesendet und in der bestellen-URL verarbeitet
+  // -> s. views.py / bestellen
   let url = "/bestellen/";
 
   fetch(url, {

@@ -32,6 +32,7 @@ def gastCookie(request):
 
     return{'artikels':artikels, 'bestellung':bestellung}
 
+# ausgelagert aus views.py / bestellen
 def gastBestellung(request, daten):
     name = daten['benutzerDaten']['name']
     email = daten['benutzerDaten']['email']
@@ -39,14 +40,18 @@ def gastBestellung(request, daten):
     cookieDaten = gastCookie(request)
     artikels = cookieDaten['artikels']
 
+    # wenn ein Gast bereits mit eMail registriert ist, 
+    # -> wird kein neuer Gastaccount mit gleicher eMail angelegt
     kunde, created = Kunde.objects.get_or_create(email=email)
     kunde.name = name
     kunde.save()
 
     bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
 
+    # Attribute s. models.py
     for i in artikels:
         artikel = Artikel.objects.get(id=i['artikel']['id'])
+        # neue Var -> nimmmt jeden neuen bestellten Artikel auf 
         bestellteArtikel = BestellteArtikel.objects.create(
             artikel=artikel,
             bestellung=bestellung,
