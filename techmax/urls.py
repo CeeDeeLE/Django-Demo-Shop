@@ -8,8 +8,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls')),
     
-    # Debug-Toolbar erscheint am lin ken Bildschirmrand
-    path('__debug_toolbar__', include('debug_toolbar.urls')),
+    # Debug-Toolbar erscheint am linken Bildschirmrand
+    # path('__debug_toolbar__', include('debug_toolbar.urls')),
+    
+    # Paypal-Page
+    # path('paypal/', include('paypal.standard.ipn.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
