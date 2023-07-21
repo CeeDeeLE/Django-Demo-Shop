@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
 ]
 
+
+# unbedingt auf 'False' setzen im Live-Betrieb mit echten Kunden-Daten !!!
 PAYPAL_TEST = True
 
 
@@ -140,6 +142,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+INTERNAL_IPS = [  
+    '127.0.0.1'  
+]
 
 
 # Static files (CSS, JavaScript, Images)

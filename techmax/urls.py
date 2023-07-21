@@ -9,10 +9,10 @@ urlpatterns = [
     path('', include('shop.urls')),
     
     # Debug-Toolbar erscheint am linken Bildschirmrand
-    # path('__debug_toolbar__', include('debug_toolbar.urls')),
+    path('__debug_toolbar__', include('debug_toolbar.urls')),
     
-    # Paypal-Page
-    # path('paypal/', include('paypal.standard.ipn.urls')),
+    # Paypal-Page einbinden
+    path('paypal/', include('paypal.standard.ipn.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

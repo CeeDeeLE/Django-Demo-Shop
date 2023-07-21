@@ -22,6 +22,11 @@ from django.utils.safestring import mark_safe
 # Bestellung von nicht eingeloggten Usern
 from . viewtools import gastCookie, gastBestellung
 
+# zur Einbindung von Paypal
+from django.urls import reverse
+from paypal.standard.forms import PayPalPaymentsForm
+
+
 # Create your views here.
 
 def shop(request):
@@ -251,14 +256,43 @@ def bestellen(request):
         land=daten['lieferadresse']['land'],
     )
     
+    # Bestellung mit Paypal-Zahlung abschließen
+    # Code von Paypal-Seite (Doku): https://django-paypal.readthedocs.io/en/latest/standard/ipn.html
+    # mit generiertem Test-Account 'business' -> live sollte hier die echte eMail stehen
+    paypal_dict = {
+    "business": "sb-qh5ij26259535@business.example.com",
+    "amount": gesamtpreis,
+    "item_name": "name of the item",
+    # "invoice": "unique-invoice-id",
+    "invoice": auftrags_id,
+    
+    # "currency" muss ergänzt werden
+    "currency_code": "EUR",
+    
+    # "notify_url": Seite für die Paypal-Abwicklung
+    "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
+    
+    # "return": Erfolgsbestätigung nach Paypal-Abschluss 
+    # -> reverse enthält die html-Page -> hier die Startseite -> kann beliebige andere sein
+    "return": request.build_absolute_uri(reverse('shop')),
+    # "cancel_return": nach Zahlungsabbruch
+    "cancel_return": request.build_absolute_uri(reverse('shop')),
+    
+    # "custom": für eine benutzerdefinierte Seite im Zahlungsprozess
+    }
+
+    paypalform = PayPalPaymentsForm(initial=paypal_dict)
+    
     auftragsUrl = str(auftrags_id)
-    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung</a>"))
+    # Paypal-Form kann 1. hier aufgerufen werden oder 2. in HTML mit {{ paypalform }} + return render()
+    messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung</a></br> Jetzt bezahlen: "+paypalform.render()))
     # zum Löschen des Cookies response in HttpResponse ändern -> Kapitel 54
     # return JsonResponse('Bestellung erfolgreich', safe=False)
     response = HttpResponse('Bestellung erfolgreich')
     response.delete_cookie('warenkorb')
 
     return response
+
 
 
 # Bestellung -> bestellung.html
