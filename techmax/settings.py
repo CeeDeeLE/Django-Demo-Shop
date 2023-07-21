@@ -157,14 +157,16 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-MEDIA_URL = "/bilder/"
 
+# Ablageort für (hochgeladene) Bilddateien
+MEDIA_URL = "/bilder/"
 
 # 2 Wege, dasMedia-Verzeichnis einzubinden
 # 1. import os
 #    MEDIA_ROOT = os.path.join(BASE_DIR, 'static/bilder')
 # 2. 
 MEDIA_ROOT = BASE_DIR / "static/bilder"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

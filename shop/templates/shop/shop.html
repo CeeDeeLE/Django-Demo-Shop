@@ -3,7 +3,7 @@
   {% for artikel in artikels %}
   <div class="col mb-3">
     <div class="card" style="max-width: 25rem; min-height: 24rem">
-      <!-- geschweifte Klammer% if '../../../static/bilder/2x geschweifte Klammerartikel.bild2x geschweifte Klammer' != empty %geschweifte Klammer -->
+      <!-- geschweifte Klammer% if '../../../static/bilder/artikel.bild' != empty %geschweifte Klammer -->
       {% if artikel.bild %}
       <img
         src="{{artikel.bild.url}}"

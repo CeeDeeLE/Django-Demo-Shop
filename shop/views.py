@@ -294,7 +294,6 @@ def bestellen(request):
     return response
 
 
-
 # Bestellung -> bestellung.html
 # wenn ein nicht eingeloggter User auf eine Bestell-Übersichts-Adresse eines Dritten zugreifen möchte, 
 # -> soll er auf der Login-Seite landen

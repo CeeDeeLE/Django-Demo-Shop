@@ -35,7 +35,8 @@
         <tbody class="table-group-divider">
           {% for artikel in artikels %}
           <tr>
-            <!-- <th scope="row">{{artikel.id}}</th> -->
+            <!-- spezieller Artikel: <th scope="row">{{artikel.id}}</th> 
+            alle Artikel ausgeben: -->
             <th scope="row">{{forloop.counter}}</th>
             <td>
               {% if artikel.artikel.bild %}
@@ -69,40 +70,10 @@
             </td>
           </tr>
           {% endfor %}
-
-          <!--           <tr>
-            <th scope="row">1</th>
-            <td>
-              <img
-                src="{% static 'bilder/kopfhoerer.jpg' %}"
-                width="50"
-                height="50"
-                alt=""
-              />
-            </td>
-            <td>Kopfhörer</td>
-            <td>1</td>
-            <td>99,00 €</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>
-              <img
-                src="{% static 'bilder/kopfhoerer.jpg' %}"
-                width="50"
-                height="50"
-                alt=""
-              />
-            </td>
-            <td>Kopfhörer</td>
-            <td>1</td>
-            <td>99,00 €</td>
-          </tr> -->
         </tbody>
       </table>
     </div>
-    <!-- </div>
-  <h2>Dein Warenkorb ist leer!</h2> -->
+    <!-- <h2>Dein Warenkorb ist leer!</h2> -->
     {% endif %}
   </div>
 
