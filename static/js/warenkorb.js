@@ -66,6 +66,7 @@ function updateGastBestellung(artikelID, action) {
 function updateKundenBestellung(artikelID, action) {
   let url = "/artikel_backend/";
 
+  // um Daten per Post an das Backend zu senden, wird ein CSFR-Tocken benötigt
   fetch(url, {
     method: "post",
     headers: {
@@ -76,7 +77,8 @@ function updateKundenBestellung(artikelID, action) {
   }).then(() => location.reload());
 }
 
-// Kasse -> kasse.html
+// Kasse
+// -> kasse.html
 let formular = document.getElementById("formular");
 let gesamtpreis = document.getElementById("gesamtpreis").value;
 

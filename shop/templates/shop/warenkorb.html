@@ -35,8 +35,8 @@
         <tbody class="table-group-divider">
           {% for artikel in artikels %}
           <tr>
-            <!-- spezieller Artikel: <th scope="row">{{artikel.id}}</th> 
-            alle Artikel ausgeben: -->
+            <!-- spezieller Artikel mit seiner ID: <th scope="row">{{artikel.id}}</th> 
+            alle Artikel ausgeben, aufgelistet mit 1 beginnend: -->
             <th scope="row">{{forloop.counter}}</th>
             <td>
               {% if artikel.artikel.bild %}
@@ -73,7 +73,9 @@
         </tbody>
       </table>
     </div>
-    <!-- <h2>Dein Warenkorb ist leer!</h2> -->
+    <!-- ursprünglich:
+    geschweifte Klammer% else %geschweifte Klammer
+    <h2>Dein Warenkorb ist leer!</h2> -->
     {% endif %}
   </div>
 

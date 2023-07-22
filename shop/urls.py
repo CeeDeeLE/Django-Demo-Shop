@@ -7,6 +7,7 @@ urlpatterns = [
     # statische urls
     path('warenkorb/', views.warenkorb, name ="warenkorb"),
     path('kasse/', views.kasse, name ="kasse"),
+    # Backend-Pfad ist nur Mittler -> ruft keine HTML-Seite auf
     path('artikel_backend/', views.artikelBackend, name ="artikel_backend"),
     # Kunden-Login / -Logout
     # -> view sollte keine function login() oder logout() enthalten, da diese bereits existieren

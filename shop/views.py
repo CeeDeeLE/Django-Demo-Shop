@@ -116,6 +116,7 @@ def kasse(request):
     ctx = {"artikels":artikels, "bestellung":bestellung}      
     return render(request, 'shop/kasse.html', ctx)
 
+
 # im artikelBackend werden Daten in die DB geladen oder geholt
 def artikelBackend(request):
     daten = json.loads(request.body)
@@ -153,6 +154,8 @@ def artikelBackend(request):
     
     return JsonResponse("Artikel hinzugefügt", safe=False)
 
+
+# Login über DB
 def loginBenutzer(request):
     seite = 'login'
     if request.method == 'POST':
@@ -169,14 +172,15 @@ def loginBenutzer(request):
 
     return render(request, 'shop/login.html', {'seite': seite})
 
+# Logout über DB
 def logoutBenutzer(request):
     logout(request)
     return redirect('shop')
 
 
-# Neukunden-Registrierung
+# Neukunden-Registrierung über DB
 # ein Neukunde wird als Benutzer, als Kunde und Inhaber einer Bestellung registriert
-# er hat keinen Zugriff auf den admin-Bereich
+# er hat keinen Zugriff auf den Admin-Bereich
 def regBenutzer(request):
     seite = 'register'
     # form = UserCreationForm

@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # Ergänzung für CSRF-Token
+    # CSRF-Token bereits integriert in Django
     'django.middleware.csrf.CsrfViewMiddleware',
     # Ergänzung für User-Authentication
     'django.contrib.auth.middleware.AuthenticationMiddleware',
