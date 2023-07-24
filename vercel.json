@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "techmax/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "techmax/wsgi.py"
+      }
+    ]
+}
