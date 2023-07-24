@@ -28,8 +28,8 @@ DEBUG = False
 
 # ALLOWED_HOSTS have to be provided in production mode!
 # ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app", "*"]
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app"]
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app", "*"]
 
 
 # Application definition
@@ -90,8 +90,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'techmax.wsgi.app'
-WSGI_APPLICATION = 'techmax.wsgi.application'
+WSGI_APPLICATION = 'techmax.wsgi.app'
+# WSGI_APPLICATION = 'techmax.wsgi.application'
 
 # für flash messages -> hauptsächlich zum Styling
 from django.contrib.messages import constants as messages

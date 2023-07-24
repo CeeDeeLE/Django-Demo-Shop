@@ -11,4 +11,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "techmax.settings")
 application = get_wsgi_application()
+
+# https://www.youtube.com/watch?v=ZjVzHcXCeMU
+# wird für die .vercel.app benötigt
 app = application
