@@ -9,7 +9,7 @@ urlpatterns = [
     path('kasse/', views.kasse, name ="kasse"),
     # Backend-Pfad ist nur Mittler -> ruft keine HTML-Seite auf
     path('artikel_backend/', views.artikelBackend, name ="artikel_backend"),
-    # Kunden-Login / -Logout
+    # Kunden-Login / -Logout -> Aufruf, wenn log-in-Button gedrückt wird
     # -> view sollte keine function login() oder logout() enthalten, da diese bereits existieren
     path('login/', views.loginBenutzer, name ="login"),
     path('logout/', views.logoutBenutzer, name ="logout"),
@@ -18,7 +18,7 @@ urlpatterns = [
     # neuer Pfad für den Abschluss des Kaufs
     path('bestellen/', views.bestellen, name ="bestellen"),
 
-    # Beisile für eine dynamische url 
+    # Beispiel für eine dynamische url 
     # -> <uuid:id> ist nicht statisch (mit Zahlen, Kleinbuchstaben und Bindestrichen)
     # -> andere Möglichkeiten: <str:id>, <int:id>, <slug:id>
     path('bestellung/<uuid:id>', views.bestellung, name ="bestellung"),

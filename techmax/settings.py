@@ -53,13 +53,14 @@ MIDDLEWARE = [
     # Debug-Toolbar-Ergänzung muss an erster Stelle erfolgen 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    # bereits in Django integriert - für Cookie und User-Daten-Speicherung
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # CSRF-Token bereits integriert in Django
     'django.middleware.csrf.CsrfViewMiddleware',
-    # Ergänzung für User-Authentication
+    # bereits in Django integriert - für  User-Authentication
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    # Ergänzung für Popup-Messages
+    # bereits in Django integriert - für Popup-Messages
     'django.contrib.messages.middleware.MessageMiddleware',
     # Ergänzung für Click-Verfolgung
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -89,7 +90,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'techmax.wsgi.application'
 
-# für flash messages
+# für flash messages -> hauptsächlich zum Styling
 from django.contrib.messages import constants as messages
 
 # Festlegung der Bootstrap-Klassen für das Erscheinungsbild der Messages

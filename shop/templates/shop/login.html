@@ -37,7 +37,9 @@
 <div>
   <h2>Registrieren</h2>
   <form method="POST" action="">
-    {% csrf_token %} {% for field in form %}
+    {% csrf_token %}
+    <!-- Schleife gibt nur die in der forms.py definierten Felder aus - ohne extra Infos aus Django -->
+    {% for field in form %}
     <div class="mt-3 mb-2">{{field.label}}</div>
     {{field}} {% endfor %}
     <br />
