@@ -68,14 +68,13 @@
         }
         return cookieValue;
       }
-      /* Cookie soll in der Var Warenkorb gespeichert werden */
+      /* Cookie soll als Objekt in der Variable Warenkorb gespeichert werden */
       let warenkorb = JSON.parse(getCookie("warenkorb"));
       if (warenkorb == undefined) {
         warenkorb = {};
         /* Speicherung als Wertepaar 
-        Cookie soll für die gesamte Site gültig bleiben: domain;path=/
+        Cookie soll für die gesamte Site gültig bleiben: domain;path=/;
         Cookie soll von allen Seiten akzeptiert werden: SameSite=None; Secure
-         + ";domain;path=/; SameSite=None; Secure"
         */
         document.cookie =
           "warenkorb=" +

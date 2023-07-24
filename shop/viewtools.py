@@ -1,6 +1,9 @@
 import json
 from . models import *
 
+
+# ausgelagtert aus views.py 'def warenkorb(request): ...', 
+# -> kann mehrfach verwendet werden -> z.B. in der 'def kasse(request): ...'
 def gastCookie(request):
     try:
         warenkorb = json.loads(request.COOKIES['warenkorb'])
@@ -18,6 +21,7 @@ def gastCookie(request):
         bestellung['get_gesamtpreis'] += gesamtpreis
         bestellung['get_gesamtmenge'] += warenkorb[i]['menge']
 
+        # == DB-Struktur
         artikel = {
             'artikel':{
                 'id':artikel.id,
@@ -32,7 +36,7 @@ def gastCookie(request):
 
     return{'artikels':artikels, 'bestellung':bestellung}
 
-# ausgelagert aus views.py / bestellen
+# ausgelagert aus views.py 'def bestellen(request): ...'
 def gastBestellung(request, daten):
     name = daten['benutzerDaten']['name']
     email = daten['benutzerDaten']['email']
@@ -44,11 +48,13 @@ def gastBestellung(request, daten):
     # -> wird kein neuer Gastaccount mit gleicher eMail angelegt
     kunde, created = Kunde.objects.get_or_create(email=email)
     kunde.name = name
+    # Daten sichern
     kunde.save()
 
     bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
 
     # Attribute s. models.py
+    # alle relevanten Artikel werden nun der neuen Bestellung zugeordnet
     for i in artikels:
         artikel = Artikel.objects.get(id=i['artikel']['id'])
         # neue Var -> nimmmt jeden neuen bestellten Artikel auf 

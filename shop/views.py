@@ -1,4 +1,8 @@
 from django.shortcuts import render, redirect
+
+# zur Einbindung von Paypal
+from django.urls import reverse
+
 from django.contrib import messages
 
 # login_required, um Seiten vor unberechtigtem Zugriff zu schützen
@@ -22,8 +26,7 @@ from django.utils.safestring import mark_safe
 # Bestellung von nicht eingeloggten Usern
 from . viewtools import gastCookie, gastBestellung
 
-# zur Einbindung von Paypal
-from django.urls import reverse
+# zur Einbindung von Paypal - Teil 2
 from paypal.standard.forms import PayPalPaymentsForm
 
 
@@ -51,8 +54,9 @@ def warenkorb(request):
 
         # Kapitel 52
         # analoge Abfrage wird im Kassenblock benötigt
+        
         # Kapitel 53
-        # gesamter Block wird in viewtools.py ausgelagert, da er sich im artikelBackend wiederholt
+        # gesamter Block wird in viewtools.py ausgelagert, da er sich in der def kasse wiederholt
 
         # try:
         #     warenkorb = json.loads(request.COOKIES['warenkorb'])
@@ -267,7 +271,7 @@ def bestellen(request):
     "business": "sb-qh5ij26259535@business.example.com",
     "amount": gesamtpreis,
     "item_name": "name of the item",
-    # "invoice": "unique-invoice-id",
+    # "invoice": "unique-invoice-id", -> ist mit auftrags_uuid gegeben !
     "invoice": auftrags_id,
     
     # "currency" muss ergänzt werden
@@ -291,7 +295,7 @@ def bestellen(request):
     # Paypal-Form kann 1. hier aufgerufen werden oder 2. in HTML mit {{ paypalform }} + return render()
     messages.success(request, mark_safe("Vielen Dank für Ihre <a href='/bestellung/"+auftragsUrl+"'>Bestellung</a></br> Jetzt bezahlen: "+paypalform.render()))
     # zum Löschen des Cookies response in HttpResponse ändern -> Kapitel 54
-    # return JsonResponse('Bestellung erfolgreich', safe=False)
+    # return JsonResponse('Bestellung erfolgreich', safe=False) -> ursprüngliche line
     response = HttpResponse('Bestellung erfolgreich')
     response.delete_cookie('warenkorb')
 
@@ -305,11 +309,11 @@ def bestellen(request):
 def bestellung(request,id):
     
     # Kapitel 46
-    # id muss exakt der id aus der urls.py entsprechen
-    # -> aus der DB wird genau ein Datensatz geladen
-    # -> mit .get wird genau ein Datensatz der uuid geladen (eine Bestellung eines Kunden)
+    # id muss für Zugriffsbeschränkung exakt der id aus der urls.py entsprechen
     # -> mit .filter wird ein Query-Set abgerufen
     # bestellung = Bestellung.objects.filter(auftrags_id=id)
+    # -> mit .get wird genau ein Datensatz aus der DB mit der uuid geladen -
+    # == eine Bestellung eines Kunden
     bestellung = Bestellung.objects.get(auftrags_id=id)
 
     # if-Abfrage soll die Bestellung aus dem Warenkorb UND den zugehörigen Kunden enthalten
@@ -320,7 +324,8 @@ def bestellung(request,id):
         ctx = {'artikels':artikels,'bestellung':bestellung}
         return render(request, 'shop/bestellung.html',ctx)
     else:
-        # wenn die Bestellung nicht existiert, zurück zur Shop-Seite
+        # wenn die Bestellung nicht existiert - z.B. da ID von and. Kunden stammt -
+        # -> zurück zur Shop-Seite
         return redirect('shop')
     
 

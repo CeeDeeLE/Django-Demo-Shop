@@ -35,16 +35,20 @@ function updateGastBestellung(artikelID, action) {
   // -> für nicht eingeloggte User an dieser Stelle festgelegt, nicht in der views.py
   // -> ist aber analog zu artikelBackend
   if (action == "bestellen") {
+    // wenn Artikel noch nicht im Warenkorb, dann mit Menge 1 hinzufügen
     if (warenkorb[artikelID] == undefined) {
       warenkorb[artikelID] = { menge: 1 };
-    } else {
+    }
+    // wenn der Artikel schon im Warenkorb, dann Menge +1
+    else {
       warenkorb[artikelID]["menge"] += 1;
     }
   }
+  // wenn Artikel im Warenkorb, dann bei Aktion "entfernen" -1
   if (action == "entfernen") {
     warenkorb[artikelID]["menge"] -= 1;
 
-    // Löschen des Artikels, wenn Menge gleich Null
+    // Löschen des Artikels aus dem Warenkorb, wenn Menge gleich Null
     if (warenkorb[artikelID]["menge"] <= 0) {
       delete warenkorb[artikelID];
     }
@@ -57,7 +61,8 @@ function updateGastBestellung(artikelID, action) {
     ";domain;path=/; SameSite=None; Secure";
   // Test-Ausgabe in der Console
   console.log(warenkorb);
-  // Artikel und Menge müssen für nicht eingeloggte User noch der globalen context_processors.py bekannt gemacht werden
+  // Artikel und Menge müssen für nicht eingeloggte User
+  // -> noch der globalen context_processors.py bekannt gemacht werden
   // mit jeder Bestellung wird die Seite neu geladen, damit Artikel und Menge hochgezählt werden
   location.reload();
 }
@@ -94,6 +99,7 @@ document
     submitFormular();
   });
 
+// Formulardaten an DB senden
 function submitFormular() {
   // zum Testen Alert
   // alert("Bestellung aufgegeben.");
@@ -129,6 +135,6 @@ function submitFormular() {
       benutzerDaten: benutzerDaten,
       lieferadresse: lieferadresse,
     }),
-    // nach Eingabe Weiterleitung auf die Startseite
+    // nach Absenden Weiterleitung auf die Startseite
   }).then(() => (window.location.href = "/"));
 }

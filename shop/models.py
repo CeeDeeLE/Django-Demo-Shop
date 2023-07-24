@@ -10,7 +10,7 @@ class Kunde(models.Model):
     benutzer = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
     # E-Mail kann als Charfield oder als Emailfield deklariert werden
-    # -> Emailfield ist ein Charfield mit Validator
+    # -> Emailfield ist ein Charfield mit Validator (Prüfung auf echte eMail-Ader.)
     # email = models.CharField(max_length=200, null=True)
     email = models.EmailField(max_length=200, null=True)
 
@@ -22,8 +22,8 @@ class Artikel(models.Model):
     beschreibung = models.TextField(null=True, blank=True)
     # für die Einrichtung als Gleitkommafeld kann FloatField oder Decimalfield genutzt werden
     # -> DecimalField erlaubt zusätzliche Attribute
-    # -> max_digits bestimmt die max. Anzahl Ziffern vorm Komma
-    # -> decimal_places bestimmmt die Anzahl Nachkommastellen
+    # -> max_digits bestimmt die max. Anzahl Ziffern vorm Komma -> 6 = max. 999.999
+    # -> decimal_places bestimmmt die Anzahl Nachkommastellen -> 2 = ,00
     preis = models.DecimalField(max_digits=6, decimal_places=2)
     # pipenv install pillow
     bild = models.ImageField(null=True, blank=True)
