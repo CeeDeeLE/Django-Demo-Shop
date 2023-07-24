@@ -9,6 +9,9 @@ from django.contrib import messages
 # Decorator wird mit @ ausgegeben
 from django.contrib.auth.decorators import login_required
 
+# von Vercel-Page: https://vercel.com/templates/python/django-hello-world
+from datetime import datetime
+
 from . models import *
 from django.http import JsonResponse, HttpResponse
 import json
