@@ -15,4 +15,6 @@ application = get_wsgi_application()
 # https://www.youtube.com/watch?v=ZjVzHcXCeMU
 # wird für die .vercel.app benötigt
 app = application
-WSGI_APPLICATION = 'techmax.wsgi.app'
+
+
+
