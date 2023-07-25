@@ -271,7 +271,8 @@ def bestellen(request):
     # Code von Paypal-Seite (Doku): https://django-paypal.readthedocs.io/en/latest/standard/ipn.html
     # mit generiertem Test-Account 'business' -> live sollte hier die echte eMail stehen
     paypal_dict = {
-    "business": "sb-qh5ij26259535@business.example.com",
+    # "business": "sb-qh5ij26259535@business.example.com",
+    "business": "sb-th3tp26384112@personal.example.com",
     "amount": gesamtpreis,
     "item_name": "name of the item",
     # "invoice": "unique-invoice-id", -> ist mit auftrags_uuid gegeben !
