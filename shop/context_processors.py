@@ -5,7 +5,12 @@ def warenkorb_anzahl(request):
 
     if request.user.is_authenticated:
         kunde = request.user.kunde
-        bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        
+        # get_or_create separiert 
+        # bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        bestellung = Bestellung.objects.filter(kunde=kunde, erledigt=False).first()
+        if not bestellung:
+            bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
 
         if bestellung:
             menge = bestellung.get_gesamtmenge
