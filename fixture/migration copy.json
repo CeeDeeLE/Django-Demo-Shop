@@ -1,0 +1,2818 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-06-22T18:56:21.801Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Kopfh÷rer",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-06-22T18:56:51.236Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Commodore 64",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-06-22T18:57:14.202Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Raspberry Pi",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-06-22T18:57:57.894Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "WiFi Pineapple",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-06-22T18:58:46.394Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "NES",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-06-22T18:59:15.492Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "ESP32",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-06-22T18:59:45.878Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Diskettenlaufwerk",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-06-22T19:00:14.196Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Gameboy",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-06-22T19:00:39.795Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Macintosh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-06-22T19:01:12.803Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "MacPhone",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-06-22T19:02:01.372Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Nokia 3210",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-06-22T19:02:27.404Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Polaroid",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-06-22T19:02:51.355Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Schallplattenspieler",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-06-22T19:03:20.029Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Schreibmaschine",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-06-22T19:03:47.203Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Stereoanlage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-06-22T19:04:37.659Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Videokamera",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-06-22T19:05:03.011Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Videorekorder",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-06-22T19:05:31.661Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Walki Talki",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-06-22T19:05:57.604Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "19",
+      "object_repr": "Sony Walkman",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-06-22T19:06:22.787Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "20",
+      "object_repr": "Windows 95",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-06-22T19:25:19.647Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "20",
+      "object_repr": "Windows 95",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-06-22T19:25:39.474Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "19",
+      "object_repr": "Sony Walkman",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-06-22T19:25:55.771Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Walki Talki",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-06-22T19:26:22.484Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Videorekorder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-06-22T19:26:44.433Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Videokamera",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-06-22T19:26:59.968Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Stereoanlage",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-06-22T19:27:13.648Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Schreibmaschine",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-06-22T19:27:27.228Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Schallplattenspieler",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-06-22T19:27:40.500Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Polaroid",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-06-22T19:27:52.265Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Nokia 3210",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-06-22T19:28:05.824Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "MacPhone",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-06-22T19:28:20.180Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Macintosh",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-06-22T19:28:35.546Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Gameboy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-06-22T19:28:47.832Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Diskettenlaufwerk",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-06-22T19:29:12.228Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "ESP32",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-06-22T19:29:38.233Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "NES",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-06-22T19:30:11.254Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "WiFi Pineapple",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-06-22T19:30:23.615Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Raspberry Pi",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-06-22T19:30:43.480Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Commodore 64",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-06-22T19:42:48.990Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Conni",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-06-22T19:43:44.798Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-07-10T19:22:01.476Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Kopfh÷rer",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-07-10T19:22:13.697Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Kopfh÷rer",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-07-10T19:56:58.124Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Conni",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2023-07-10T19:59:09.052Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Macintosh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2023-07-10T19:59:32.036Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Commodore 64",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2023-07-10T19:59:49.059Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Kopfh÷rer",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2023-07-11T15:14:12.182Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Commodore 64",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Bild\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2023-07-11T21:29:28.080Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "6",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2023-07-11T21:29:42.256Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "7",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2023-07-11T21:29:53.430Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "8",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2023-07-12T04:21:17.077Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "CeeDeeLE",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2023-07-12T05:53:41.019Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "CeeDeeLE",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2023-07-19T16:00:22.150Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "23",
+      "object_repr": "23",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2023-07-25T22:26:27.764Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "CeeDeeLE",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add bestellung",
+      "content_type": 7,
+      "codename": "add_bestellung"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change bestellung",
+      "content_type": 7,
+      "codename": "change_bestellung"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete bestellung",
+      "content_type": 7,
+      "codename": "delete_bestellung"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view bestellung",
+      "content_type": 7,
+      "codename": "view_bestellung"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add artikel",
+      "content_type": 8,
+      "codename": "add_artikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change artikel",
+      "content_type": 8,
+      "codename": "change_artikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete artikel",
+      "content_type": 8,
+      "codename": "delete_artikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view artikel",
+      "content_type": 8,
+      "codename": "view_artikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add adresse",
+      "content_type": 9,
+      "codename": "add_adresse"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change adresse",
+      "content_type": 9,
+      "codename": "change_adresse"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete adresse",
+      "content_type": 9,
+      "codename": "delete_adresse"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view adresse",
+      "content_type": 9,
+      "codename": "view_adresse"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add kunde",
+      "content_type": 10,
+      "codename": "add_kunde"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change kunde",
+      "content_type": 10,
+      "codename": "change_kunde"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete kunde",
+      "content_type": 10,
+      "codename": "delete_kunde"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view kunde",
+      "content_type": 10,
+      "codename": "view_kunde"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add bestellte artikel",
+      "content_type": 11,
+      "codename": "add_bestellteartikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change bestellte artikel",
+      "content_type": 11,
+      "codename": "change_bestellteartikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete bestellte artikel",
+      "content_type": 11,
+      "codename": "delete_bestellteartikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view bestellte artikel",
+      "content_type": 11,
+      "codename": "view_bestellteartikel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add PayPal IPN",
+      "content_type": 12,
+      "codename": "add_paypalipn"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change PayPal IPN",
+      "content_type": 12,
+      "codename": "change_paypalipn"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete PayPal IPN",
+      "content_type": 12,
+      "codename": "delete_paypalipn"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view PayPal IPN",
+      "content_type": 12,
+      "codename": "view_paypalipn"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$9SugQVCGEhi8oo4DvsmfMt$gB700R1gFoSDMK65CItVTDOT5Ck5EkAV5mBQKI1aExI=",
+      "last_login": "2023-07-25T22:25:58.183Z",
+      "is_superuser": true,
+      "username": "CeeDee",
+      "first_name": "",
+      "last_name": "",
+      "email": "c.deten@gmx.de",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-06-22T18:55:03.843Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$9ZdxAl5sVRDvUCFHAqbkvp$va/6E0i9QHGwav4mLHaLUrR24aN38okc/e14oXJ8pu4=",
+      "last_login": "2023-07-25T12:24:28Z",
+      "is_superuser": true,
+      "username": "CeeDeeLE",
+      "first_name": "",
+      "last_name": "",
+      "email": "tools@enjo.style",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-07-11T16:45:22Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Yb49lwUAq5vyzEE4wvYr6a$AVLN8I0nbfll04GuCHFtxU31wSdA8KuTsq4smm0WtaM=",
+      "last_login": "2023-07-18T00:09:50.852Z",
+      "is_superuser": false,
+      "username": "TechMax",
+      "first_name": "",
+      "last_name": "",
+      "email": "was@soll.das",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-07-11T17:10:48.299Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$ORo0XmJn4LEijfLCCQ9V4r$De9WDrvtAqar6AIyji7f2ot321K5YodOk9ohrsd25bE=",
+      "last_login": "2023-07-18T00:07:30.943Z",
+      "is_superuser": false,
+      "username": "MaxTech",
+      "first_name": "",
+      "last_name": "",
+      "email": "tools@enjo.style",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-07-11T17:22:26.620Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "shop", "model": "bestellung" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "shop", "model": "artikel" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "shop", "model": "adresse" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "shop", "model": "kunde" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "shop", "model": "bestellteartikel" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "ipn", "model": "paypalipn" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "09gxtg66zo8cwrut9aydpztj4b4vbs16",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qIwBO:Fe38wHaDBHcO1z0SuI5zDDe5tO0IdrARa2bUruHKxdo",
+      "expire_date": "2023-07-24T19:04:26.740Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "64f81uup0iaj0i8y24czya6prklf0c2i",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qJJ0c:4hB4ZRv9ksJkm_bT5JH86zxjhDxaRbRQzcbNjPDW0J8",
+      "expire_date": "2023-07-25T19:26:50.083Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ai8676f6t273kdkh58jh3t0nqx1w0wpq",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qJEsx:j_PRcAbf7PzSfjptOlQi3Eq0V4ftU-0hUmf-I7dNw3s",
+      "expire_date": "2023-07-25T15:02:39.808Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "bwz2mjyfbki1h4wg5nwrib2yyxdg6b4g",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qOQTe:PCLX-IE4wI8Ycoe0j5PmsMlm9EzvpmMRckCa9Ku7veA",
+      "expire_date": "2023-08-08T22:25:58.234Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "i0ygg8hn0a680uza0qfj49dyr2t8pbbu",
+    "fields": {
+      "session_data": ".eJxVjEEOgjAQRe_StWnKTGsHl-45A5l2BosaSCisjHdXEha6_e-9_zI9b2vpt6pLP4q5GDCn3y1xfui0A7nzdJttnqd1GZPdFXvQartZ9Hk93L-DwrV865YDoBJ7AmEvUeLgHIAGCUSSPRGSxwGxIYUkgq04OcfQOHSgns37A9T5N0M:1qJH7Q:g4WCSAmmL6e3-w2Rp4zUpmXDrJESk1yk_Lge4YgA5J8",
+      "expire_date": "2023-07-25T17:25:44.612Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "i21slffpsm5b40djcb7pwkwzunywn2ba",
+    "fields": {
+      "session_data": ".eJxVjEEOgjAQRe_StWnKTGsHl-45A5l2BosaSCisjHdXEha6_e-9_zI9b2vpt6pLP4q5GDCn3y1xfui0A7nzdJttnqd1GZPdFXvQartZ9Hk93L-DwrV865YDoBJ7AmEvUeLgHIAGCUSSPRGSxwGxIYUkgq04OcfQOHSgns37A9T5N0M:1qJRMi:OFBf6X-iqZ8hwwGasdRGe06AbS9uHdPN_ds-64_DMiQ",
+      "expire_date": "2023-07-26T04:22:12.640Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ksy6zz5i7eipcfh6r23ra46jkbie02d3",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qLPqd:ojXRrgAunz-thCrCTbPpr3Mhe3B2UoPNCXd5QjofsJU",
+      "expire_date": "2023-07-31T15:09:15.267Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "o9ehb79miyhszax8zpjl4oioi4wbquyu",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qJKq8:8loCX_m31PtNteUx_amOcMZpShyB1wXgPs8saRMU90w",
+      "expire_date": "2023-07-25T21:24:08.058Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vwr0bzpqe842vijiddnc50f2wr50l52u",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8YVy67zeQYUCpGkhKuzL-uzbpQrf3nHNfLOK21riNssQ5szOT7PS7JaRHaTvId2y3zqm3dZkT3xV-0MGnnsvzcrh_BxVH_dZgUdlcPCUATZpIBQHaqSANaROsCyi8N8YLAVI60FcjsvI2BXBok2LvD7UNNjM:1qOH6H:vKMO31LuwY_zwwgdTxqLVsUdY2cLtzAf0e5W0TYPb8c",
+      "expire_date": "2023-08-08T12:25:13.283Z"
+    }
+  },
+  {
+    "model": "shop.kunde",
+    "pk": 1,
+    "fields": { "benutzer": 1, "name": "Conni", "email": "tools@enjo.style" }
+  },
+  {
+    "model": "shop.kunde",
+    "pk": 2,
+    "fields": { "benutzer": 2, "name": "CeeDeeLE", "email": null }
+  },
+  {
+    "model": "shop.kunde",
+    "pk": 3,
+    "fields": { "benutzer": 3, "name": "TechMax", "email": null }
+  },
+  {
+    "model": "shop.kunde",
+    "pk": 4,
+    "fields": { "benutzer": 4, "name": "MaxTech", "email": null }
+  },
+  {
+    "model": "shop.kunde",
+    "pk": 5,
+    "fields": { "benutzer": null, "name": "ConniDee", "email": "rvgr@joag.de" }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 1,
+    "fields": {
+      "name": "Kopfh÷rer",
+      "beschreibung": "Bluetooth noise cancelling",
+      "preis": "99.00",
+      "bild": "kopfhoerer_luBsJod.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 2,
+    "fields": {
+      "name": "Commodore 64",
+      "beschreibung": "8-Bit-Heimcomputer",
+      "preis": "229.99",
+      "bild": ""
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 3,
+    "fields": {
+      "name": "Raspberry Pi",
+      "beschreibung": "Einplatinencomputer",
+      "preis": "6.99",
+      "bild": "rpi_bD2dh5P.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 4,
+    "fields": {
+      "name": "WiFi Pineapple",
+      "beschreibung": "Magic WLAN Router",
+      "preis": "1199.00",
+      "bild": "pineapple_FBWEFtM.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 5,
+    "fields": {
+      "name": "NES",
+      "beschreibung": "Nintendo Entertainment System",
+      "preis": "599.99",
+      "bild": "nes_CTrGdZ4.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 6,
+    "fields": {
+      "name": "ESP32",
+      "beschreibung": "32-Bit Microcontroller",
+      "preis": "9.09",
+      "bild": "esp32_LcQEXFt.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 7,
+    "fields": {
+      "name": "Diskettenlaufwerk",
+      "beschreibung": "HP 3.5 Zoll Laufwerk",
+      "preis": "39.99",
+      "bild": "diskettenlaufwerk_YFLrvkp.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 8,
+    "fields": {
+      "name": "Gameboy",
+      "beschreibung": "Handheld Spielekonsole",
+      "preis": "59.95",
+      "bild": "gameboy_7wFqvZN.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 9,
+    "fields": {
+      "name": "Macintosh",
+      "beschreibung": "Personal Computer",
+      "preis": "495.95",
+      "bild": "mac_t5Fx2vR.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 10,
+    "fields": {
+      "name": "MacPhone",
+      "beschreibung": "Apple Mobiltelefon",
+      "preis": "350.00",
+      "bild": "macphone_qMOGFFS.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 11,
+    "fields": {
+      "name": "Nokia 3210",
+      "beschreibung": "Full Feature Phone",
+      "preis": "32.10",
+      "bild": "nokia3210_AjMrc7x.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 12,
+    "fields": {
+      "name": "Polaroid",
+      "beschreibung": "Sofortbildkamera",
+      "preis": "89.50",
+      "bild": "polaroid_LLj7Vtc.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 13,
+    "fields": {
+      "name": "Schallplattenspieler",
+      "beschreibung": "Philips Player",
+      "preis": "60.00",
+      "bild": "schallplattenspieler_V59T1sD.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 14,
+    "fields": {
+      "name": "Schreibmaschine",
+      "beschreibung": "Olympia electric 45",
+      "preis": "45.00",
+      "bild": "schreibmaschiene_i4z4ii9.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 15,
+    "fields": {
+      "name": "Stereoanlage",
+      "beschreibung": "RFT Multifunktionsgerõt",
+      "preis": "129.95",
+      "bild": "stereoanlage_byVFPdS.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 16,
+    "fields": {
+      "name": "Videokamera",
+      "beschreibung": "Super 8",
+      "preis": "75.00",
+      "bild": "videokamera_UVWTzwH.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 17,
+    "fields": {
+      "name": "Videorekorder",
+      "beschreibung": "VHS Abspielgerõt",
+      "preis": "99.99",
+      "bild": "videorecorder_MWbFBNq.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 18,
+    "fields": {
+      "name": "Walki Talki",
+      "beschreibung": "Talk over the Air",
+      "preis": "29.95",
+      "bild": "walkitalki_Yu6ysG1.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 19,
+    "fields": {
+      "name": "Sony Walkman",
+      "beschreibung": "portables Musikabspielgerõte",
+      "preis": "39.00",
+      "bild": "walkman_Mm64KcC.jpg"
+    }
+  },
+  {
+    "model": "shop.artikel",
+    "pk": 20,
+    "fields": {
+      "name": "Windows 95",
+      "beschreibung": "PC Betriebssystem",
+      "preis": "9.99",
+      "bild": "win95_BLbSSya.jpg"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 1,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-06-22T19:43:44.796Z",
+      "erledigt": true,
+      "auftrags_id": "69fde784-1c6d-44eb-a5e6-8c0108b99a5c"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 2,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-11T16:45:23.318Z",
+      "erledigt": true,
+      "auftrags_id": "2668ba10-6930-484e-aa46-f6eac7216f99"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 3,
+    "fields": {
+      "kunde": 3,
+      "bestelldatum": "2023-07-11T17:10:48.885Z",
+      "erledigt": false,
+      "auftrags_id": null
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 4,
+    "fields": {
+      "kunde": 4,
+      "bestelldatum": "2023-07-11T17:22:27.181Z",
+      "erledigt": true,
+      "auftrags_id": "a529f534-0878-4f47-bb2c-501feff4d0d0"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 5,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-11T21:24:25.272Z",
+      "erledigt": true,
+      "auftrags_id": "1ac82b05-3599-4cd5-890c-b5da77d52cf1"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 9,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-11T21:29:53.475Z",
+      "erledigt": true,
+      "auftrags_id": "07b64e03-b6b4-4383-bd75-e5dfb7cc952b"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 10,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-11T21:36:37.821Z",
+      "erledigt": true,
+      "auftrags_id": "83a5ca9b-39f4-488a-964f-ddf32c4537a2"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 11,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-12T04:21:33.069Z",
+      "erledigt": true,
+      "auftrags_id": "b90e0280-c8c6-41e4-b7eb-f7edd0a4d764"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 12,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T04:22:27.745Z",
+      "erledigt": true,
+      "auftrags_id": "f6f78480-8829-4c4d-abf0-51eb7371111f"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 13,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T04:26:28.576Z",
+      "erledigt": true,
+      "auftrags_id": "d807206f-5988-445c-9f41-73f349520152"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 14,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T04:28:14.305Z",
+      "erledigt": true,
+      "auftrags_id": "f7eda3bb-2182-4369-98cf-6430bcda615a"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 15,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T04:29:43.214Z",
+      "erledigt": true,
+      "auftrags_id": "baf56cd2-1d60-4665-b61f-724eaa960bed"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 16,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T05:41:37.544Z",
+      "erledigt": true,
+      "auftrags_id": "7ff66ae5-3903-4aa6-ab9d-db87910ce8df"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 17,
+    "fields": {
+      "kunde": 2,
+      "bestelldatum": "2023-07-12T05:51:04.999Z",
+      "erledigt": false,
+      "auftrags_id": null
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 18,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-17T22:52:16.677Z",
+      "erledigt": true,
+      "auftrags_id": "b16686bd-8a0b-4480-a6cc-41593448328d"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 19,
+    "fields": {
+      "kunde": 4,
+      "bestelldatum": "2023-07-17T22:56:25.913Z",
+      "erledigt": false,
+      "auftrags_id": null
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 20,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-18T23:15:17.784Z",
+      "erledigt": true,
+      "auftrags_id": "5a7aee33-4889-4242-9a67-eeec5a1d5edc"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 21,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-18T23:16:47.528Z",
+      "erledigt": true,
+      "auftrags_id": "fe2a60b8-4c46-4d2f-b8d8-043724057369"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 22,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-18T23:20:47.730Z",
+      "erledigt": true,
+      "auftrags_id": "4155576c-2f04-42b2-a7c3-fe5ba60907ca"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 24,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-21T00:17:36.522Z",
+      "erledigt": true,
+      "auftrags_id": "883b8eec-3be7-4793-bd8b-6ca3b1b0c963"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 25,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-21T00:37:01.030Z",
+      "erledigt": true,
+      "auftrags_id": "6022f9c2-83d0-46e0-8722-70de836d2ccb"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 26,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-21T00:43:52.728Z",
+      "erledigt": true,
+      "auftrags_id": "f3c39f5b-da7c-4f99-a83e-2a8fe44c39fd"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 27,
+    "fields": {
+      "kunde": 5,
+      "bestelldatum": "2023-07-24T10:05:09.983Z",
+      "erledigt": true,
+      "auftrags_id": "f0d8cd8e-0db6-432c-b2be-8e9c8d23da33"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 28,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-25T12:33:01.307Z",
+      "erledigt": true,
+      "auftrags_id": "96295093-80a0-48ca-8689-1863c198e1ba"
+    }
+  },
+  {
+    "model": "shop.bestellung",
+    "pk": 29,
+    "fields": {
+      "kunde": 1,
+      "bestelldatum": "2023-07-25T12:40:10.068Z",
+      "erledigt": false,
+      "auftrags_id": null
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 14,
+    "fields": {
+      "artikel": 16,
+      "bestellung": 1,
+      "menge": 1,
+      "datum": "2023-07-11T01:49:49.792Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 16,
+    "fields": {
+      "artikel": 19,
+      "bestellung": 1,
+      "menge": 1,
+      "datum": "2023-07-11T01:50:54.144Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 19,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 1,
+      "menge": 1,
+      "datum": "2023-07-11T14:28:20.529Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 20,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 1,
+      "menge": 5,
+      "datum": "2023-07-11T15:27:53.036Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 21,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 5,
+      "menge": 1,
+      "datum": "2023-07-11T21:27:40.810Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 22,
+    "fields": {
+      "artikel": 3,
+      "bestellung": 5,
+      "menge": 1,
+      "datum": "2023-07-11T21:27:41.452Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 23,
+    "fields": {
+      "artikel": 4,
+      "bestellung": 5,
+      "menge": 1,
+      "datum": "2023-07-11T21:27:42.314Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 24,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 5,
+      "menge": 1,
+      "datum": "2023-07-11T21:27:43.283Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 25,
+    "fields": {
+      "artikel": 1,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-11T21:28:56.538Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 26,
+    "fields": {
+      "artikel": 2,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-11T21:28:57.329Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 27,
+    "fields": {
+      "artikel": 3,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-11T21:28:58.061Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 28,
+    "fields": {
+      "artikel": 4,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-11T21:28:58.882Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 29,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 10,
+      "menge": 1,
+      "datum": "2023-07-11T21:36:50.583Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 30,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 10,
+      "menge": 1,
+      "datum": "2023-07-11T21:36:51.271Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 31,
+    "fields": {
+      "artikel": 3,
+      "bestellung": 10,
+      "menge": 1,
+      "datum": "2023-07-11T21:36:51.886Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 32,
+    "fields": {
+      "artikel": 4,
+      "bestellung": 10,
+      "menge": 1,
+      "datum": "2023-07-11T21:36:52.665Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 33,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 2,
+      "menge": 1,
+      "datum": "2023-07-12T04:20:01.113Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 34,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 2,
+      "menge": 1,
+      "datum": "2023-07-12T04:20:02.040Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 35,
+    "fields": {
+      "artikel": 9,
+      "bestellung": 2,
+      "menge": 1,
+      "datum": "2023-07-12T04:20:05.981Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 36,
+    "fields": {
+      "artikel": 10,
+      "bestellung": 2,
+      "menge": 1,
+      "datum": "2023-07-12T04:20:08.905Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 37,
+    "fields": {
+      "artikel": 15,
+      "bestellung": 2,
+      "menge": 1,
+      "datum": "2023-07-12T04:20:12.657Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 38,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 12,
+      "menge": 1,
+      "datum": "2023-07-12T04:25:49.528Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 39,
+    "fields": {
+      "artikel": 9,
+      "bestellung": 12,
+      "menge": 1,
+      "datum": "2023-07-12T04:25:52.830Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 40,
+    "fields": {
+      "artikel": 10,
+      "bestellung": 12,
+      "menge": 1,
+      "datum": "2023-07-12T04:25:53.657Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 41,
+    "fields": {
+      "artikel": 15,
+      "bestellung": 12,
+      "menge": 1,
+      "datum": "2023-07-12T04:25:59.080Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 42,
+    "fields": {
+      "artikel": 13,
+      "bestellung": 13,
+      "menge": 1,
+      "datum": "2023-07-12T04:27:32.592Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 43,
+    "fields": {
+      "artikel": 17,
+      "bestellung": 13,
+      "menge": 1,
+      "datum": "2023-07-12T04:27:35.055Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 44,
+    "fields": {
+      "artikel": 19,
+      "bestellung": 13,
+      "menge": 1,
+      "datum": "2023-07-12T04:27:36.591Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 45,
+    "fields": {
+      "artikel": 17,
+      "bestellung": 14,
+      "menge": 1,
+      "datum": "2023-07-12T04:29:04.422Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 46,
+    "fields": {
+      "artikel": 18,
+      "bestellung": 14,
+      "menge": 1,
+      "datum": "2023-07-12T04:29:05.467Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 47,
+    "fields": {
+      "artikel": 19,
+      "bestellung": 14,
+      "menge": 1,
+      "datum": "2023-07-12T04:29:07.016Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 48,
+    "fields": {
+      "artikel": 13,
+      "bestellung": 14,
+      "menge": 1,
+      "datum": "2023-07-12T04:29:10.704Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 49,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 15,
+      "menge": 1,
+      "datum": "2023-07-12T05:40:39.193Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 50,
+    "fields": {
+      "artikel": 7,
+      "bestellung": 15,
+      "menge": 1,
+      "datum": "2023-07-12T05:40:41.191Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 51,
+    "fields": {
+      "artikel": 11,
+      "bestellung": 15,
+      "menge": 1,
+      "datum": "2023-07-12T05:40:45.084Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 52,
+    "fields": {
+      "artikel": 16,
+      "bestellung": 15,
+      "menge": 1,
+      "datum": "2023-07-12T05:40:48.535Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 53,
+    "fields": {
+      "artikel": 20,
+      "bestellung": 15,
+      "menge": 1,
+      "datum": "2023-07-12T05:40:51.217Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 55,
+    "fields": {
+      "artikel": 19,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:06.322Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 56,
+    "fields": {
+      "artikel": 20,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:08.696Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 57,
+    "fields": {
+      "artikel": 17,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:10.383Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 59,
+    "fields": {
+      "artikel": 15,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:14.172Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 60,
+    "fields": {
+      "artikel": 16,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:15.608Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 61,
+    "fields": {
+      "artikel": 13,
+      "bestellung": 16,
+      "menge": 1,
+      "datum": "2023-07-12T05:50:17.271Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 62,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 4,
+      "menge": 1,
+      "datum": "2023-07-17T14:50:15.714Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 63,
+    "fields": {
+      "artikel": 3,
+      "bestellung": 4,
+      "menge": 1,
+      "datum": "2023-07-17T14:50:17.265Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 64,
+    "fields": {
+      "artikel": 4,
+      "bestellung": 4,
+      "menge": 1,
+      "datum": "2023-07-17T14:50:18.686Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 66,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 11,
+      "menge": 1,
+      "datum": "2023-07-17T22:52:00.304Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 67,
+    "fields": {
+      "artikel": 5,
+      "bestellung": 20,
+      "menge": 1,
+      "datum": "2023-07-18T23:15:17.809Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 68,
+    "fields": {
+      "artikel": 9,
+      "bestellung": 20,
+      "menge": 2,
+      "datum": "2023-07-18T23:15:17.832Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 69,
+    "fields": {
+      "artikel": 4,
+      "bestellung": 21,
+      "menge": 1,
+      "datum": "2023-07-18T23:16:47.553Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 70,
+    "fields": {
+      "artikel": 7,
+      "bestellung": 21,
+      "menge": 2,
+      "datum": "2023-07-18T23:16:47.574Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 71,
+    "fields": {
+      "artikel": 8,
+      "bestellung": 21,
+      "menge": 1,
+      "datum": "2023-07-18T23:16:47.598Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 72,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 22,
+      "menge": 1,
+      "datum": "2023-07-18T23:20:47.751Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 73,
+    "fields": {
+      "artikel": 3,
+      "bestellung": 22,
+      "menge": 1,
+      "datum": "2023-07-18T23:20:47.776Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 74,
+    "fields": {
+      "artikel": 4,
+      "bestellung": 22,
+      "menge": 1,
+      "datum": "2023-07-18T23:20:47.805Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 75,
+    "fields": {
+      "artikel": 7,
+      "bestellung": 22,
+      "menge": 1,
+      "datum": "2023-07-18T23:20:47.825Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 76,
+    "fields": {
+      "artikel": 2,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-19T15:59:40.858Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 77,
+    "fields": {
+      "artikel": 3,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-19T15:59:40.875Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 78,
+    "fields": {
+      "artikel": 4,
+      "bestellung": null,
+      "menge": 1,
+      "datum": "2023-07-19T15:59:40.895Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 79,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 24,
+      "menge": 1,
+      "datum": "2023-07-21T00:17:36.549Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 80,
+    "fields": {
+      "artikel": 7,
+      "bestellung": 25,
+      "menge": 1,
+      "datum": "2023-07-21T00:37:01.059Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 81,
+    "fields": {
+      "artikel": 11,
+      "bestellung": 25,
+      "menge": 1,
+      "datum": "2023-07-21T00:37:01.086Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 82,
+    "fields": {
+      "artikel": 15,
+      "bestellung": 25,
+      "menge": 1,
+      "datum": "2023-07-21T00:37:01.113Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 83,
+    "fields": {
+      "artikel": 19,
+      "bestellung": 25,
+      "menge": 1,
+      "datum": "2023-07-21T00:37:01.143Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 84,
+    "fields": {
+      "artikel": 1,
+      "bestellung": 26,
+      "menge": 1,
+      "datum": "2023-07-21T00:43:52.758Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 85,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 26,
+      "menge": 1,
+      "datum": "2023-07-21T00:43:52.785Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 86,
+    "fields": {
+      "artikel": 6,
+      "bestellung": 26,
+      "menge": 1,
+      "datum": "2023-07-21T00:43:52.818Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 87,
+    "fields": {
+      "artikel": 18,
+      "bestellung": 26,
+      "menge": 1,
+      "datum": "2023-07-21T00:43:52.850Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 88,
+    "fields": {
+      "artikel": 7,
+      "bestellung": 27,
+      "menge": 1,
+      "datum": "2023-07-24T10:05:10.005Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 89,
+    "fields": {
+      "artikel": 11,
+      "bestellung": 27,
+      "menge": 1,
+      "datum": "2023-07-24T10:05:10.029Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 90,
+    "fields": {
+      "artikel": 16,
+      "bestellung": 27,
+      "menge": 1,
+      "datum": "2023-07-24T10:05:10.056Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 91,
+    "fields": {
+      "artikel": 18,
+      "bestellung": 18,
+      "menge": 1,
+      "datum": "2023-07-25T12:32:44.360Z"
+    }
+  },
+  {
+    "model": "shop.bestellteartikel",
+    "pk": 92,
+    "fields": {
+      "artikel": 2,
+      "bestellung": 28,
+      "menge": 1,
+      "datum": "2023-07-25T12:39:55.736Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 1,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 1,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-11T21:24:25.206Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 2,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 5,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-11T21:28:17.438Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 3,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 9,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-11T21:36:37.756Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 4,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 10,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T04:21:33.001Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 5,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 2,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T04:22:27.692Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 6,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 12,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T04:26:28.511Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 7,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 13,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T04:28:14.249Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 8,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 14,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T04:29:43.154Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 9,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 15,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T05:41:37.468Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 10,
+    "fields": {
+      "kunde": 2,
+      "bestellung": 16,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-12T05:51:04.926Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 11,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 11,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-17T22:52:16.604Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 12,
+    "fields": {
+      "kunde": 4,
+      "bestellung": 4,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-17T22:56:25.854Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 13,
+    "fields": {
+      "kunde": 5,
+      "bestellung": 22,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-18T23:20:47.866Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 14,
+    "fields": {
+      "kunde": 5,
+      "bestellung": null,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-19T15:59:40.944Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 15,
+    "fields": {
+      "kunde": 5,
+      "bestellung": 24,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-21T00:17:36.594Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 16,
+    "fields": {
+      "kunde": 5,
+      "bestellung": 25,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-21T00:37:01.196Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 17,
+    "fields": {
+      "kunde": 5,
+      "bestellung": 26,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-21T00:43:52.896Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 18,
+    "fields": {
+      "kunde": 5,
+      "bestellung": 27,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-24T10:05:10.099Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 19,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 18,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-25T12:33:01.181Z"
+    }
+  },
+  {
+    "model": "shop.adresse",
+    "pk": 20,
+    "fields": {
+      "kunde": 1,
+      "bestellung": 28,
+      "adresse": "Holleweg 1",
+      "plz": "04277",
+      "stadt": "Leipzig",
+      "land": "D",
+      "datum": "2023-07-25T12:40:09.941Z"
+    }
+  }
+]

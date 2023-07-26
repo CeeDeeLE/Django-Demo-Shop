@@ -29,7 +29,7 @@ DEBUG = True
 # ALLOWED_HOSTS have to be provided in production mode!
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app"]
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app", "*"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -55,6 +55,8 @@ MIDDLEWARE = [
     # Debug-Toolbar-Ergänzung muss an erster Stelle erfolgen 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    # wird für Azure-Apps benötigt zur Bereitstellung statischer Dateien
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     # bereits in Django integriert - für Cookie und User-Daten-Speicherung
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -90,6 +92,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'techmax.wsgi.app'
 # WSGI_APPLICATION = 'techmax.wsgi.application'
 
@@ -109,13 +112,26 @@ MESSAGE_TAGS = {
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'tech_db',
+        'NAME': 'tech_db',
+        'USER' : 'postgres',
+        # 'USER' : 'CeeDeeLE',
+        'PASSWORD' : 'WB_cimdata_01',
+        # 'PASSWORD' : 'WBcimdata02',
+        'HOST' : 'localhost',
+        'PORT' : '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -161,6 +177,11 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# https://learn.microsoft.com/de-de/azure/app-service/tutorial-python-postgresql-app?tabs=flask%2Cwindows
+# wird für Azure-Apps benötigt zur Bereitstellung statischer Dateien
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Ablageort für (hochgeladene) Bilddateien
 MEDIA_URL = "/bilder/"

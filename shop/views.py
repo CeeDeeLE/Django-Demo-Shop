@@ -46,7 +46,13 @@ def shop(request):
 def warenkorb(request):
     if request.user.is_authenticated:
         kunde = request.user.kunde
-        bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        
+        # get_or_create separiert 
+        # bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        bestellung = Bestellung.objects.filter(kunde=kunde, erledigt=False).first()
+        if not bestellung:
+            bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
+        
         artikels = bestellung.bestellteartikel_set.all()
 
         # else betrifft die nicht eingeloggten User
@@ -105,7 +111,13 @@ def warenkorb(request):
 def kasse(request):
     if request.user.is_authenticated:
         kunde = request.user.kunde
-        bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        
+        # get_or_create separiert 
+        # bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        bestellung = Bestellung.objects.filter(kunde=kunde, erledigt=False).first()
+        if not bestellung:
+            bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
+
         artikels = bestellung.bestellteartikel_set.all()
         
     # else gilt für nicht eingeloggte User
@@ -135,10 +147,20 @@ def artikelBackend(request):
     # kunde = request.user.kunde setzt einen eingeloggten Kunden voraus
     kunde = request.user.kunde
     artikel = Artikel.objects.get(id=artikelID)
+
     # wenn schon eine Bestellung existiert, "get", sonst "create"
-    bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+    # get_or_create separiert 
+    # bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+    bestellung = Bestellung.objects.filter(kunde=kunde, erledigt=False).first()
+    if not bestellung:
+        bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
+
     # falls derselbe Artikel schon im Warenkorb liegt, soll kein neuer kreiert werden, sondern hochgezaehlt werden
-    bestellteArtikel, created = BestellteArtikel.objects.get_or_create(bestellung=bestellung, artikel=artikel)
+    # get_or_create separiert 
+    # bestellteArtikel, created = BestellteArtikel.objects.get_or_create(bestellung=bestellung, artikel=artikel)
+    bestellteArtikel = BestellteArtikel.objects.filter(bestellung=bestellung, artikel=artikel).first()
+    if not bestellteArtikel:    
+        bestellteArtikel = BestellteArtikel.objects.create(bestellung=bestellung, artikel=artikel)
 
     if action == 'bestellen':
         bestellteArtikel.menge = (bestellteArtikel.menge +1)
@@ -242,7 +264,13 @@ def bestellen(request):
     # über Warenkorb.js und Backend aus Formular-Bereich der kasse.html
     if request.user.is_authenticated:
         kunde = request.user.kunde
-        bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+
+        # get_or_create separiert 
+        # bestellung, created = Bestellung.objects.get_or_create(kunde=kunde, erledigt=False)
+        bestellung = Bestellung.objects.filter(kunde=kunde, erledigt=False).first()
+        if not bestellung:
+            bestellung = Bestellung.objects.create(kunde=kunde, erledigt=False)
+
     # für nicht registrierte Nutzer
     else:
         # Test-Print -> abgelöst in Kapitel 54
