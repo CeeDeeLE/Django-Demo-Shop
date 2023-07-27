@@ -85,19 +85,28 @@ function updateKundenBestellung(artikelID, action) {
 // Kasse
 // -> kasse.html
 let formular = document.getElementById("formular");
-let gesamtpreis = document.getElementById("gesamtpreis").value;
+let gesamtpreis = document.getElementById("gesamtpreis");
+let bezahlen = document.getElementById("bezahlen-button");
 
-formular.addEventListener("submit", function (e) {
-  e.preventDefault();
-  document.getElementById("formular-button").classList.add("d-none");
-  document.getElementById("bezahlen-info").classList.remove("d-none");
-});
+if (gesamtpreis != null) {
+  gesamtpreis = document.getElementById("gesamtpreis").value;
+} else {
+  gesamtpreis = 0;
+}
 
-document
-  .getElementById("bezahlen-button")
-  .addEventListener("click", function (e) {
+if (formular != null) {
+  formular.addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("formular-button").classList.add("d-none");
+    document.getElementById("bezahlen-info").classList.remove("d-none");
+  });
+}
+
+if (bezahlen != null) {
+  bezahlen.addEventListener("click", function (e) {
     submitFormular();
   });
+}
 
 // Formulardaten an DB senden
 function submitFormular() {
