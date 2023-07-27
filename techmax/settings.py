@@ -129,6 +129,7 @@ DATABASES = {
         'PASSWORD' : 'WB_cimdata_01',
         # 'PASSWORD' : 'WBcimdata02',
         'HOST' : 'localhost',
+        # 'HOST' : '*',
         'PORT' : '',
     }
 }
@@ -164,7 +165,7 @@ USE_I18N = True
 USE_TZ = True
 
 INTERNAL_IPS = [  
-    '127.0.0.1'  
+    '127.0.0.1'
 ]
 
 
