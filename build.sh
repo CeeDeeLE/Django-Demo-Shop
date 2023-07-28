@@ -27,7 +27,6 @@ python manage.py migrate --noinput
 echo "Collecting static files..."
 python manage.py collectstatic --noinput --clear
 
-
 # um 'Command "./build.sh" exited with 1' zu vermeiden
 # beides sollte gehen, aber true wird nicht mehr erreicht
 # https://unix.stackexchange.com/questions/308207/exit-code-at-the-end-of-a-bash-script
