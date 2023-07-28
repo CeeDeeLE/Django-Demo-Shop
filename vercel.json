@@ -1,14 +1,26 @@
 {
-    "builds": [
-      {
-        "src": "techmax/wsgi.py",
-        "use": "@vercel/python"
+  "builds": [
+    {
+      "src": "techmax/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+    },
+    {
+      "src": "build.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "techmax/wsgi.py"
-      }
-    ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "techmax/wsgi.py"
+    }
+  ]
 }

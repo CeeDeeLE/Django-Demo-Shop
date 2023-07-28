@@ -17,6 +17,11 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# von https://omavhad.hashnode.dev/deploying-django-with-postgresql-on-vercel
+# Anleitung für postgres-Nutzung unter Vercel (production mode)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
 # für Fehlermeldungen URL hier definieren 
 # -> bezieht sich auf die views.py
 # -> anderer Bezugsort ist möglich

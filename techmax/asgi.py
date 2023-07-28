@@ -13,4 +13,5 @@ from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'techmax.settings')
 
-app = application = get_asgi_application()
+application = get_asgi_application()
+# app = application = get_asgi_application()
