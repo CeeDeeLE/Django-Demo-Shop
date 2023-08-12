@@ -10,6 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+
+# s. https://gist.github.com/jbothma/8a9a30399c2091d89763bff0a1952da4
+# s. https://www.youtube.com/watch?v=Ri-pFKtMX48
+# https://omavhad.hashnode.dev/deploying-django-with-postgresql-on-vercel
+import dj_database_url
+from decouple import config
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,14 +127,8 @@ MESSAGE_TAGS = {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
-# }
+# 
 
-# s. https://gist.github.com/jbothma/8a9a30399c2091d89763bff0a1952da4
-# s. https://www.youtube.com/watch?v=Ri-pFKtMX48
-# https://omavhad.hashnode.dev/deploying-django-with-postgresql-on-vercel
-import dj_database_url
-from decouple import config
-from dotenv import load_dotenv
 
 load_dotenv()
 

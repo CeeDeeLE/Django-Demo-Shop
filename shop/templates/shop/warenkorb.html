@@ -57,12 +57,17 @@
             </td>
             <td>{{artikel.artikel.name}}</td>
             <td>{{artikel.menge}}</td>
+            {% if artikel.artikel.preis %}
             <td>{{artikel.artikel.preis|floatformat:2}} €</td>
             <td>{{artikel.get_summe|floatformat:2}} €</td>
+            {% else %}
+            <td>0,00 €</td>
+            <td>0,00 €</td>
+            {% endif %}
             <td>
               <button
                 class="btn btn-outline-danger warenkorb-bestellen"
-                data-artikel="{{artikel.artikel.id}}"
+                data-artikel="{{ artikel.artikel.id }}"
                 data-action="entfernen"
               >
                 - 1

@@ -1,3 +1,5 @@
+# pylint: disable=E1101
+# pylint: disable=no-member
 from django.shortcuts import render, redirect
 
 # zur Einbindung von Paypal
@@ -10,7 +12,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # von Vercel-Page: https://vercel.com/templates/python/django-hello-world
-from datetime import datetime
+
 
 from . models import *
 from django.http import JsonResponse, HttpResponse
